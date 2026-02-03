@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md border border-gray-200;
+  }
+  
+  /* Enhanced form styling for banking UI */
+  .banking-input {
+    @apply w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white;
+  }
+  
+  .banking-button {
+    @apply w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl;
+  }
+  
+  /* Glass morphism effect */
+  .glass-card {
+    @apply bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/20;
+  }
+  
+  /* Professional gradient backgrounds */
+  .banking-gradient {
+    @apply bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800;
+  }
+  
+  /* Enhanced glass morphism */
+  .glass-morphism {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+  }
+  
+  /* Professional input styling */
+  .banking-input-glass {
+    @apply bg-white/5 border border-white/20 text-white placeholder-white/40 backdrop-blur-sm hover:border-white/30 focus:bg-white/10 focus:ring-2 focus:ring-blue-400;
+  }
+  
+  /* Enhanced button effects */
+  .banking-button-enhanced {
+    @apply bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] active:scale-95;
+  }
+
+  /* Simple navigation item transitions */
+  .nav-item {
+    @apply transition-colors duration-300;
+  }
+
+  .nav-item-icon {
+    transition: color 0.3s ease;
+  }
+
+  .nav-item-text {
+    transition: color 0.3s ease;
+  }
+
+  .nav-item-bg {
+    transition: background-color 0.3s ease;
+  }
+
+  /* Ultra smooth active indicator slide - no jerky movements */
+  .nav-active-indicator {
+    transition: top 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
+                height 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.4s ease-out;
+    will-change: top, height;
+    transform: translateZ(0); /* Hardware acceleration for smoother animation */
+    backface-visibility: hidden; /* Prevent flickering */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Simple page transition */
+  .page-transition {
+    animation: pageFadeIn 0.3s ease-out;
+  }
+
+  @keyframes pageFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Simple fade in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+}
+
+/* Autofill normalization for login page only */
+.login-page input:-webkit-autofill,
+.login-page input:-webkit-autofill:hover,
+.login-page input:-webkit-autofill:focus,
+.login-page textarea:-webkit-autofill,
+.login-page textarea:-webkit-autofill:hover,
+.login-page textarea:-webkit-autofill:focus,
+.login-page select:-webkit-autofill,
+.login-page select:-webkit-autofill:hover,
+.login-page select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 9999s ease-out 0s;
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.10) inset;
+}
+
+/* For screens below sm (i.e., mobile) */
+@media (max-width: 639px) {
+  .placeholder-xs::placeholder {
+    font-size: 14px; /* adjust as needed */
+  }
+  .input-xs {
+    font-size: 14px; /* input text size on mobile */
+  }
+}

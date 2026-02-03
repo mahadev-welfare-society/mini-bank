@@ -1,0 +1,2 @@
+# Ignore everything except main branch
+# This ensures only main branch deployments work

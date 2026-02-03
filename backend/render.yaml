@@ -1,0 +1,25 @@
+runtime: python
+pythonVersion: 3.12.6
+
+services:
+  - type: web
+    name: mini-bank-backend
+    env: python
+    plan: free
+    branch: main
+    autoDeploy: true
+    # Only deploy when code is pushed directly to main branch
+    # Merging main into feature branches will NOT trigger deployment
+    buildCommand: >
+      pip install --upgrade pip &&
+      pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: DATABASE_URL
+        value: "postgresql://minibank_db_yk9j_user:2aaJ8rkhG40RBr9eW6kcl7AdXX2cHbJP@dpg-d407bkp5pdvs73fno77g-a.oregon-postgres.render.com/minibank_db_yk9j"
+      - key: JWT_SECRET_KEY
+        value: "supersecretkey"
+      - key: FRONTEND_URL
+        value: https://mini-bank-project.vercel.app
