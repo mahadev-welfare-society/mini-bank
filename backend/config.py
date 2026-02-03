@@ -17,9 +17,9 @@ class Config:
     SMTP_USERNAME = os.environ.get('SMTP_USERNAME', '')
     SMTP_PASSWORD = os.environ.get('SMTP_PASSWORD', '')
     SMTP_USE_TLS = os.environ.get('SMTP_USE_TLS', 'true').lower() == 'true'
-    FROM_EMAIL = os.environ.get('FROM_EMAIL', os.environ.get('SMTP_USERNAME', 'noreply@minibank.com'))
-    FROM_NAME = os.environ.get('FROM_NAME', 'Mini Bank')
-    FRONTEND_URL = os.environ.get('FRONTEND_URL', 'https://mini-bank-project.vercel.app')
+    FROM_EMAIL = os.environ.get('FROM_EMAIL', os.environ.get('SMTP_USERNAME', ''))
+    FROM_NAME = os.environ.get('FROM_NAME', 'Mahadev Welfare Society')
+    FRONTEND_URL = os.environ.get('FRONTEND_URL', 'https://mahadev-welfare-society.vercel.app')
     
     # Razorpay Payment Gateway Configuration
     RAZORPAY_KEY_ID = os.environ.get('RAZORPAY_KEY_ID', '')

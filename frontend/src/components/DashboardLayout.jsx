@@ -268,7 +268,7 @@ function DashboardLayout() {
               </div>
               <div className="flex flex-col">
                 <h1 className="text-base sm:text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                  Mini Bank
+                  Mahadev Welfare Society
                 </h1>
                 <p className="text-[10px] sm:text-xs text-indigo-600 font-semibold uppercase tracking-wider">
                   Banking System

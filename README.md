@@ -1,4 +1,4 @@
-# Mini Bank
+# Mahadev Welfare Society - Banking System
 
 A modern banking system built with Flask (backend) and React (frontend) featuring JWT authentication and customer management.
 

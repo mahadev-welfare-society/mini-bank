@@ -99,11 +99,6 @@ def create_app(config_name='default'):
             response.headers['Access-Control-Max-Age'] = '3600'
         return response
     
-    # Health check endpoint
-    @app.route('/api/health')
-    def health_check():
-        return {'status': 'ok', 'message': 'Mini Bank API is running'}
-    
     # Register blueprints
     from app.routes.auth import auth_bp
     from app.routes.customers import customers_bp

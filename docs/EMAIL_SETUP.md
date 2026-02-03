@@ -1,10 +1,10 @@
 # Email Notification Setup Guide
 
-This guide explains how to configure email notifications for Mini Bank.
+This guide explains how to configure email notifications for Mahadev Welfare Society.
 
 ## Overview
 
-The Mini Bank application sends automated email notifications in the following scenarios:
+The Mahadev Welfare Society application sends automated email notifications in the following scenarios:
 
 1. **Customer Creation**: When a new customer is created, they receive a welcome email with their User ID, Email, and Password.
 2. **Account Creation**: When a new account (Savings, RD, FD, or Loan) is created for a customer, they receive an email notification with account details.
@@ -23,7 +23,7 @@ SMTP_USERNAME=your-email@gmail.com  # Your email address
 SMTP_PASSWORD=your-app-password     # App-specific password (NOT regular password)
 SMTP_USE_TLS=true                   # Use TLS encryption (true/false)
 FROM_EMAIL=your-email@gmail.com     # Sender email address
-FROM_NAME=Mini Bank                 # Sender name
+FROM_NAME=Mahadev Welfare Society   # Sender name
 FRONTEND_URL=http://localhost:3000  # Frontend URL for login links
 ```
 
@@ -33,7 +33,7 @@ FRONTEND_URL=http://localhost:3000  # Frontend URL for login links
 2. **Generate an App Password**:
    - Go to https://myaccount.google.com/apppasswords
    - Select "Mail" and "Other (Custom name)"
-   - Enter "Mini Bank" as the name
+   - Enter "Mahadev Welfare Society" as the name
    - Copy the 16-character password
    - Use this as your `SMTP_PASSWORD`
 
@@ -45,7 +45,7 @@ FRONTEND_URL=http://localhost:3000  # Frontend URL for login links
    SMTP_PASSWORD=xxxx xxxx xxxx xxxx  # The 16-character app password
    SMTP_USE_TLS=true
    FROM_EMAIL=your-email@gmail.com
-   FROM_NAME=Mini Bank
+   FROM_NAME=Mahadev Welfare Society
    ```
 
 ### Using Other Email Providers
@@ -88,7 +88,7 @@ SMTP_USE_TLS=true
 ## Email Templates
 
 ### Customer Welcome Email
-- **Subject**: "Welcome to Mini Bank - Your Account Has Been Created"
+- **Subject**: "Welcome to Mahadev Welfare Society - Your Account Has Been Created"
 - **Contents**:
   - Customer name
   - User ID
@@ -98,7 +98,7 @@ SMTP_USE_TLS=true
   - Security notice
 
 ### Account Creation Email
-- **Subject**: "New [Account Type] Account Created - Mini Bank"
+- **Subject**: "New [Account Type] Account Created - Mahadev Welfare Society"
 - **Contents**:
   - Customer name
   - Account type (Savings, RD, FD, Loan)

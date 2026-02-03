@@ -893,7 +893,7 @@ function ManageAccess() {
 
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email (optional)
+                      Email *
                     </label>
                     <input
                       type="email"
@@ -910,6 +910,7 @@ function ManageAccess() {
                       }`}
                       autoCorrect="off"
                       autoCapitalize="off"
+                      required
                     />
                     {managerValidationErrors.email && (
                       <p className="mt-1 text-xs text-red-600">

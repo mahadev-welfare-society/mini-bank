@@ -32,7 +32,7 @@ class EmailService:
             'smtp_username': os.environ.get('SMTP_USERNAME', ''),
             'smtp_password': os.environ.get('SMTP_PASSWORD', ''),
             'from_email': os.environ.get('FROM_EMAIL', os.environ.get('SMTP_USERNAME', 'noreply@minibank.com')),
-            'from_name': os.environ.get('FROM_NAME', 'Mini Bank'),
+            'from_name': os.environ.get('FROM_NAME', 'Mahadev Welfare Society'),
             'use_tls': os.environ.get('SMTP_USE_TLS', 'true').lower() == 'true' if not use_ssl else False,
             'use_ssl': use_ssl
         }
@@ -225,7 +225,7 @@ class EmailService:
         }
         login_url_with_params = f"{login_url}?{urlencode(params)}"
         
-        subject = 'Welcome to Mini Bank - Your Account Has Been Created'
+        subject = 'Welcome to Mahadev Welfare Society - Your Account Has Been Created'
         
         # Manager email template (with credentials and login link)
         if role == 'manager':
@@ -302,12 +302,12 @@ class EmailService:
             </head>
             <body>
                 <div class="header">
-                    <h1>Welcome to Mini Bank!</h1>
+                    <h1>Welcome to Mahadev Welfare Society!</h1>
                 </div>
                 <div class="content">
                     <p>Dear {customer_name},</p>
                     
-                    <p>Your account has been successfully created on Mini Bank. Below are your login credentials:</p>
+                    <p>Your account has been successfully created on Mahadev Welfare Society. Below are your login credentials:</p>
                     
                     <div class="credentials">
                         <div class="credential-item">
@@ -325,10 +325,10 @@ class EmailService:
                         Never share your credentials with anyone.
                     </div>
                     
-                    <p>You can now log in to your Mini Bank account using the credentials above:</p>
+                    <p>You can now log in to your Mahadev Welfare Society account using the credentials above:</p>
                     
                     <div style="text-align: center;">
-                        <a href="{login_url_with_params}" class="button">Login to Mini Bank</a>
+                        <a href="{login_url_with_params}" class="button">Login to Mahadev Welfare Society</a>
                     </div>
                     
                     <p style="font-size: 12px; color: #666; text-align: center; margin-top: 15px;">
@@ -338,22 +338,22 @@ class EmailService:
                     <p>If you have any questions or need assistance, please contact our support team.</p>
                     
                     <p>Best regards,<br>
-                    Mini Bank Team</p>
+                    Mahadev Welfare Society Team</p>
                 </div>
                 <div class="footer">
                     <p>This is an automated message. Please do not reply to this email.</p>
-                    <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.</p>
+                    <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.</p>
                 </div>
             </body>
             </html>
             """
             
             text_body = f"""
-Welcome to Mini Bank!
+Welcome to Mahadev Welfare Society!
 
 Dear {customer_name},
 
-Your account has been successfully created on Mini Bank. Below are your login credentials:
+Your account has been successfully created on Mahadev Welfare Society. Below are your login credentials:
 
 Email: {customer_email}
 Password: {password}
@@ -361,7 +361,7 @@ Password: {password}
 ⚠️ Security Notice:
 Never share your credentials with anyone.
 
-You can now log in to your Mini Bank account using the credentials above.
+You can now log in to your Mahadev Welfare Society account using the credentials above.
 Login URL: {login_url_with_params}
 
 Note: The login link above will pre-fill your email. Enter your password to complete login.
@@ -369,11 +369,11 @@ Note: The login link above will pre-fill your email. Enter your password to comp
 If you have any questions or need assistance, please contact our support team.
 
 Best regards,
-Mini Bank Team
+Mahadev Welfare Society Team
 
 ---
 This is an automated message. Please do not reply to this email.
-© {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.
+© {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.
             """
         else:
             # Staff/Customer email template (welcome only, no credentials or login links)
@@ -413,45 +413,45 @@ This is an automated message. Please do not reply to this email.
             </head>
             <body>
                 <div class="header">
-                    <h1>Welcome to Mini Bank!</h1>
+                    <h1>Welcome to Mahadev Welfare Society!</h1>
                 </div>
                 <div class="content">
                     <p>Dear {customer_name},</p>
                     
-                    <p>Your account has been successfully created on Mini Bank.</p>
+                    <p>Your account has been successfully created on Mahadev Welfare Society.</p>
                     
                     <p>We are pleased to have you as part of our banking family. Your account is now active and ready to use.</p>
                     
                     <p>If you have any questions or need assistance, please contact our support team.</p>
                     
                     <p>Best regards,<br>
-                    Mini Bank Team</p>
+                    Mahadev Welfare Society Team</p>
                 </div>
                 <div class="footer">
                     <p>This is an automated message. Please do not reply to this email.</p>
-                    <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.</p>
+                    <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.</p>
                 </div>
             </body>
             </html>
             """
             
             text_body = f"""
-Welcome to Mini Bank!
+Welcome to Mahadev Welfare Society!
 
 Dear {customer_name},
 
-Your account has been successfully created on Mini Bank.
+Your account has been successfully created on Mahadev Welfare Society.
 
 We are pleased to have you as part of our banking family. Your account is now active and ready to use.
 
 If you have any questions or need assistance, please contact our support team.
 
 Best regards,
-Mini Bank Team
+Mahadev Welfare Society Team
 
 ---
 This is an automated message. Please do not reply to this email.
-© {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.
+© {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.
             """
         
         return EmailService.send_email(
@@ -553,7 +553,7 @@ This is an automated message. Please do not reply to this email.
         }
         account_display_name = account_type_names.get(account_type, f'{account_type} Account')
         
-        subject = f'New {account_display_name} Created - Mini Bank'
+        subject = f'New {account_display_name} Created - Mahadev Welfare Society'
         
         html_body = f"""
         <!DOCTYPE html>
@@ -645,11 +645,11 @@ This is an automated message. Please do not reply to this email.
                 <p>If you have any questions or need assistance, please contact our support team.</p>
                 
                 <p>Best regards,<br>
-                Mini Bank Team</p>
+                Mahadev Welfare Society Team</p>
             </div>
             <div class="footer">
                 <p>This is an automated message. Please do not reply to this email.</p>
-                <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.</p>
+                <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.</p>
             </div>
         </body>
         </html>
@@ -671,11 +671,11 @@ If you have any questions or need assistance, please contact our support team.
 If you have any questions or need assistance, please contact our support team.
 
 Best regards,
-Mini Bank Team
+Mahadev Welfare Society Team
 
 ---
 This is an automated message. Please do not reply to this email.
-© {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.
+© {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.
         """
         
         return EmailService.send_email(
@@ -760,7 +760,7 @@ This is an automated message. Please do not reply to this email.
         else:
             balance_text = f"Account Balance: ₹{balance_after:,.2f}"
         
-        subject = f'Transaction Alert: {transaction_display_name} - Mini Bank'
+        subject = f'Transaction Alert: {transaction_display_name} - Mahadev Welfare Society'
         
         html_body = f"""
         <!DOCTYPE html>
@@ -914,18 +914,18 @@ This is an automated message. Please do not reply to this email.
                 <p>If you did not initiate this transaction, please contact our support team immediately.</p>
                 
                 <p>Best regards,<br>
-                Mini Bank Team</p>
+                Mahadev Welfare Society Team</p>
             </div>
             <div class="footer">
                 <p>This is an automated message. Please do not reply to this email.</p>
-                <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.</p>
+                <p>&copy; {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.</p>
             </div>
         </body>
         </html>
         """
         
         text_body = f"""
-Transaction Alert - Mini Bank
+Transaction Alert - Mahadev Welfare Society
 
 Dear {customer_name},
 
@@ -950,11 +950,11 @@ Balance Information:
 If you did not initiate this transaction, please contact our support team immediately.
 
 Best regards,
-Mini Bank Team
+Mahadev Welfare Society Team
 
 ---
 This is an automated message. Please do not reply to this email.
-© {os.environ.get('CURRENT_YEAR', '2025')} Mini Bank. All rights reserved.
+© {os.environ.get('CURRENT_YEAR', '2025')} Mahadev Welfare Society. All rights reserved.
         """
         
         return EmailService.send_email(

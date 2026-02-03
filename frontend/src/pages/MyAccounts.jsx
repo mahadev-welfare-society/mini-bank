@@ -289,7 +289,7 @@ function MyAccounts() {
         key: orderData.key_id,
         amount: orderData.amount_in_paise,
         currency: orderData.currency,
-        name: "Mini Bank",
+        name: "Mahadev Welfare Society",
         description: orderData.description || capitalizeWords(transactionType),
         order_id: orderData.order_id,
         handler: async function (response) {

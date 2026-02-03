@@ -103,7 +103,7 @@ function LoginPage() {
             </div>
             <div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
-                Mini Bank
+                Mahadev Welfare Society
               </h1>
               <p className="text-blue-200 mt-2 text-xs sm:text-sm font-medium">
                 Secure Banking Portal
@@ -203,7 +203,7 @@ function LoginPage() {
         </div>
 
         <div className="text-center mt-6 sm:mt-8 text-white/60 text-xs sm:text-sm">
-          <p>© 2025 Mini Bank. All rights reserved.</p>
+          <p>© 2025 Mahadev Welfare Society. All rights reserved.</p>
         </div>
       </div>
     </div>
